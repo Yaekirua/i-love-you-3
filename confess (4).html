@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confess</title>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bg {
+            background: #CCCCCC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .item {
+            text-align: center;
+        }
+
+        #btn {
+            position: absolute;
+            padding: 10px;
+            margin-left: 0;
+            margin-right: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+
+        button {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="item">
+            <img src="kucing.gif" alt="tenet slow" height="200px">
+            <h1>Saya suka awak tapi malu la nak cakap so saya buat macam ni je la boleh</h1>
+            <h1>Tapi awak nak kat saya tak? Saya ada Honda</h1>
+            <button onclick="nak()">nak</button>
+            <div id="btn">
+                <button onmouseover="taknak()">taknak</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function nak() {
+            alert("Ni la perempuan, nak Honda je");
+        }
+        function taknak() {
+            var btn = document.getElementById("btn");
+            var i = Math.floor(Math.random() * 300) + 1;
+            var j = Math.floor(Math.random() * 600) + 1;
+            btn.style.left = i + "px";
+            btn.style.top = j + "px";
+        }
+    </script>
+</body>
+
+</html>
